@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
+    <div calass="notice"><% if flash[:notice] %></div>
       <%= flash[:notice] %>
     <% end %>
     <%= yield %>

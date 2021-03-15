@@ -1,5 +1,16 @@
 <h1>Editing Book</h1>
 
+　<% if @book.errors.any? %>
+  <div class = "alert">
+   error
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
 
  <div class="field">
